@@ -21,16 +21,13 @@
     .arrow-hover{
         transform: rotateX(180deg);
     }
-    /* .h-[235px]{
-        height: 500px;
-    } */
     .certific{
         height: 200px;
-        transition: all 1s ease-in-out;
-        
+        transition: all 1s ease-in-out; 
     }
     .certific-open{
-        height: 750px;
+        height: 630px;
+
     }
     
     .letter-spacing{
