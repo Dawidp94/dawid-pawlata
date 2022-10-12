@@ -21,8 +21,22 @@
     .arrow-hover{
         transform: rotateX(180deg);
     }
-    .h-[235px]{
+    /* .h-[235px]{
         height: 500px;
+    } */
+    .certific{
+        height: 235px;
+        transition: all 1s ease-in-out;
+        
+    }
+    .certific-open{
+        height: 800px;
+    }
+    .arrow{
+        transition: all 1s ease-in-out;
+    }
+    .arrow-rotate{
+        transform: rotateX(180deg);
     }
     .letter-spacing{
         letter-spacing: 10px;
@@ -56,6 +70,10 @@
     }
     .underline-animation-black:hover::after{
         transform: scaleX(1);
+    }
+
+    .duration-2000{
+        animation-duration: 2s;
     }
    
   }
