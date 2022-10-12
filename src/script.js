@@ -29,7 +29,7 @@ import 'https://rawcdn.githack.com/flackr/scroll-timeline/637746fa559c3f9d01fcda
 
    $("#arrow").click(function(){
 
-    $("div#arrow").toggleClass("arrow-hover")
+    // $("div#arrow").toggleClass("arrow-hover")
     $("div#certific").toggleClass("h-[235px]")
 
    })
