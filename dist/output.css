@@ -426,12 +426,24 @@ html {
   background-color: #01181d;
 }
 
-.arrow-hover{
-  transform: rotateX(180deg);
+/* .h-[235px]{
+        height: 500px;
+    } */
+
+.certific{
+  transition: all 1s ease-in-out;
 }
 
-.h-[235px]{
-  height: 500px;
+.certific-open{
+  height: 630px;
+}
+
+.arrow{
+  transition: all 1s ease-in-out;
+}
+
+.arrow-rotate{
+  transform: rotateX(180deg);
 }
 
 .letter-spacing{
@@ -675,11 +687,6 @@ html {
   margin-right: auto;
 }
 
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
 .mt-20 {
   margin-top: 5rem;
 }
@@ -752,8 +759,8 @@ html {
   height: 16rem;
 }
 
-.h-\[235px\] {
-  height: 235px;
+.h-\[288px\] {
+  height: 288px;
 }
 
 .h-full {
@@ -766,6 +773,10 @@ html {
 
 .h-20 {
   height: 5rem;
+}
+
+.max-h-\[288px\] {
+  max-height: 288px;
 }
 
 .min-h-\[288px\] {
@@ -1128,12 +1139,6 @@ html {
   transition-duration: 150ms;
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition-shadow {
   transition-property: box-shadow;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1142,6 +1147,12 @@ html {
 
 .transition-transform {
   transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all {
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1239,6 +1250,14 @@ html {
 }
 
 @media (min-width: 640px) {
+  .sm\:h-auto {
+    height: auto;
+  }
+
+  .sm\:min-h-\[288px\] {
+    min-height: 288px;
+  }
+
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -1275,6 +1294,14 @@ html {
 
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:h-auto {
+    height: auto;
+  }
+
+  .md\:min-h-\[288px\] {
+    min-height: 288px;
   }
 
   .md\:w-14 {

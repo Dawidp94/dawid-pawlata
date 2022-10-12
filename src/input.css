@@ -25,19 +25,14 @@
         height: 500px;
     } */
     .certific{
-        height: 235px;
+        height: 200px;
         transition: all 1s ease-in-out;
         
     }
     .certific-open{
-        height: 800px;
+        height: 750px;
     }
-    .arrow{
-        transition: all 1s ease-in-out;
-    }
-    .arrow-rotate{
-        transform: rotateX(180deg);
-    }
+    
     .letter-spacing{
         letter-spacing: 10px;
     }
