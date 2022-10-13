@@ -16,53 +16,42 @@ import 'https://rawcdn.githack.com/flackr/scroll-timeline/637746fa559c3f9d01fcda
     $('#foto-map').addClass("opacity-0")
 
     }
-    })  
+    }),
 
-
-   $("div.nav_burger").click(function()
+   $("div#burger").click(function()
    {
-        // console.log("działa");
-       $("ul.navs_elements").toggleClass("navsChange"),
-       $("div.nav_burger").toggleClass("change")
+       $("div#burger").toggleClass("change")
+       $("body").toggleClass("overflow-y-hidden")
+       $("#menu").toggleClass("translate-y-full")
+       if ($("#background-darken").hasClass("visible-mode")){
+        $("#background-darken").removeClass("visible-mode")
+       }else{
+        $("#background-darken").addClass("visible-mode")
+       }
        
+   }
+   );
+
+   $("li#select-menu").click(function()
+   {
+        $("body").removeClass("overflow-y-hidden")
+        $("#menu").removeClass("translate-y-full")
+        $("div#burger").removeClass("change")
+        $("#background-darken").addClass("visible-mode")
    });
 
    $("#arrow").click(function(){
 
     $("div#arrow").toggleClass("arrow-rotate")
     $("div#certific-container").toggleClass("certific-open")
+   
 
    })
  
+   
+      
 
-function changeDot() {
-    const scrollValue = $(window).scrollTop();
-    const heightS2 = $('.section1').offset().top;
-    const heightS3 = $('.section2').offset().top;
-    const heightS4 = $('.section3').offset().top;
-    const heightS5 = $('.section4').offset().top;
-    const heightS6 = $('footer').offset().top;
-    
- 
-    if (scrollValue < heightS2 - 100) {
-     $('div').not('.dot_1').removeClass('active');
-     $('.dot_1').addClass('active');
-    } else if (scrollValue < heightS3 - 100) {
-     $('div').not('.dot_2').removeClass('active');
-     $('.dot_2').addClass('active');
-    } else if (scrollValue < heightS4 - 100) {
-     $('div').not('.dot_3').removeClass('active');
-     $('.dot_3').addClass('active');
-    } else if (scrollValue < heightS5 - 100) {
-     $('div').not('.dot_4').removeClass('active');
-     $('.dot_4').addClass('active');
-    } else if (scrollValue < heightS6 - 100) {
-     $('div').not('.dot_5').removeClass('active');
-     $('.dot_5').addClass('active');
-    }
-   }
- 
-   $(window).on("scroll", changeDot)
+
 
 
 

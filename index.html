@@ -1,7 +1,7 @@
 
 
 <!doctype html>
-<html lang="pl">
+<html lang="pl" class=" scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,27 +18,34 @@
 </head>
 <body>
   <main class=" select-none">
-    <div class=" h-screen" id="sec1">
+    <img class=" z-[-1] fixed object-cover h-screen" id="foto-main" src="/src/img/foto03-pc.jpg" alt="img">
+    
+    <section class=" h-screen z-10">
         
-            <img class=" z-[-1] fixed object-cover h-screen" id="foto-main" src="/src/img/foto03-pc.jpg" alt="img">
         
         
         <nav class=" w-full p-5 flex justify-between">
             <div class=" flex items-center  w-4/5 m-auto">
                 <a href="#"><h2 class=" text-xl sm:text-2xl border border-white text-white uppercase p-2 letter-spacing md:mt-10 lg:ml-28 relative no-underline inline-block underline-animation">DawidPawlata</h2></a>
             </div>
-            <div class="w-1/6 my-auto md:mt-10">
-                <div class=" w-10 h-0.5 bg-white my-2 md:w-14"></div>
-                <div class=" w-10 h-0.5 bg-white my-2 md:w-14"></div>
-                <div class=" w-10 h-0.5 bg-white my-2 md:w-14"></div>
-            </div>  
+
+           
+                <div class=" w-screen h-screen bg-black/60 absolute top-0 left-0 visible-mode z-30 " id="background-darken"></div>
             
-            <!-- <ul>
-                <li><a href="#sec2">O MNIE</a></li>
-                <li><a href="#sec3">UMIEJĘTNOŚCI</a></li>
-                <li><a href="#sec4">PROJEKTY</a></li>
-                <li><a href="#sec5">KONTAKT</a></li>
-            </ul> -->
+                <div class="w-1/6 my-auto md:mt-10 z-50 opacity-100" id="burger">
+                    <div class=" w-10 h-0.5 bg-white my-2 md:w-14" id="bar-1"></div>
+                    <div class=" w-10 h-0.5 bg-white my-2 md:w-14" id="bar-2"></div>
+                    <div class=" w-10 h-0.5 bg-white my-2 md:w-14" id="bar-3"></div>
+                </div>  
+                
+                <ul class=" absolute right-0 -top-3/4 text-white bg-black/70 w-3/4 h-3/4 sm:pl-10 flex flex-col lg:flex-row lg:w-full justify-evenly lg:items-center py-10 z-40 transition-all ease-in-out duration-500" id="menu">
+                    <li class=" w-2/3 flex justify-center" id="select-menu"><a class=" text-5xl sm:text-6xl p-5 h-20 text-center relative no-underline  underline-animation hover:cursor-pointer" href="#sec2">ABOUT ME</a></li>
+                    <li class=" w-2/3 flex justify-center" id="select-menu"><a class=" text-5xl sm:text-6xl p-5 h-20 text-center relative no-underline  underline-animation hover:cursor-pointer" href="#sec3">MY SKILLS</a></li>
+                    <li class=" w-2/3 flex justify-center" id="select-menu"><a class=" text-5xl sm:text-6xl p-5 h-20 text-center relative no-underline  underline-animation hover:cursor-pointer" href="#sec4">PROJECTS</a></li>
+                    <li class=" w-2/3 flex justify-center" id="select-menu"><a class=" text-5xl sm:text-6xl p-5 h-20 text-center relative no-underline  underline-animation hover:cursor-pointer" href="#sec5">CONTACT</a></li>
+                </ul>
+            
+
         </nav> 
         
 
@@ -52,7 +59,7 @@
         <div class=" flex flex-col justify-center items-center h-3/4 text-white mt-20">
             <h1>
                 <div class=" flex justify-center">
-                    <p class=" text-6xl sm:text-7xl md:text-8xl drop-shadow-2xl">Front-End Developer</p>
+                    <p class="z-20 text-6xl sm:text-7xl md:text-8xl drop-shadow-2xl">Front-End Developer</p>
                 </div>
             
                 <div class=" flex justify-center">
@@ -76,15 +83,15 @@
             <a href="#sec1"><div class="home"><i></i></div></a>
         </div> -->
 
-    </div>
-    <section class="  bg-color-extra-dark text-white w-full text-center ">
+    </section>
+    <section class=" bg-color-extra-dark text-white w-full text-center" id="sec2">
         <p class=" uppercase text-2xl pt-10 letter-spacing">some about me</p>
         <h2 class="text-4xl md:text-5xl lg:text-7xl">Dawid Pawlata <span class=" text-color-medium">Front-End Developer</span></h2>
 
         <div class=" lg:flex flex-row">
             <div class="flex flex-col lg:w-1/2 border lg:mt-20  m-8 md:m-12 lg:m-20">
             
-                    <p class=" p-5  text-2xl text-justify m-auto lg:m-0 ">My name is Dawid, I'm 28 years old and I come from Łowicz. I discovered my passion for programming back in my high school days, when we were creating our first websites during the computer science lesson.</p>
+                    <p class=" p-5 sm:p-10 md:p-20 lg:p-10 xl:px-20 2xl:px-32 lg:mt-10 2xl:mt-20 text-2xl text-justify m-auto lg:m-0 indent-5 xl:indent-10">My name is Dawid, I'm 28 years old and I come from Łowicz. I discovered my passion for programming back in my high school days, when we were creating our first websites during the computer science lesson.</p>
                     
                     <div class=" mb-10 flex justify-end mx-auto h-16 w-1/2 md:mb-0 ">
                         <a href="/about.html" class=" uppercase border py-2 px-4 h-12 w-28 text-xl hover:cursor-pointer hover:bg-white/10 relative no-underline inline-block underline-animation">read more...</a>
@@ -105,67 +112,67 @@
                         <div>
                             <a class=" flex justify-between items-center m-auto p-3 border text-2xl mt-3 max-w-md relative no-underline underline-animation hover:scale-110 transition ease-in-out" href="/open/certyfikat_Dawid_Pawlata.pdf" target="_blank">
                                 <p class=" text-color-medium text-xl md:text-3xl ">JavaScript Front-end Developer</p>
-                                <div class="certific_arrow"><i class=" text-4xl icon-angle-circled-right"></i></div>
+                                <div class="certific_arrow"><i class=" text-4xl icon-right-circled"></i></div>
                             </a>
                         </div>
                         <div>
                             <a class=" flex justify-between items-center m-auto p-3 border text-2xl mt-3 max-w-md relative no-underline underline-animation hover:scale-110 transition ease-in-out" href="/open/full-stack.pdf" target="_blank">
                                 <p class=" text-base sm:text-xl md:text-2xl">How to become a Full Stack Developer</p>
-                                <div class="certific_arrow"><i class=" text-4xl icon-angle-circled-right"></i></div>
+                                <div class="certific_arrow"><i class=" text-4xl icon-right-circled"></i></div>
                             </a>
                         </div>
                         <div>
                             <a class=" flex justify-between items-center m-auto p-3 border text-2xl mt-3 max-w-md relative no-underline underline-animation hover:scale-110 transition ease-in-out" href="/open/prog-asynch-js.pdf" target="_blank">
                                 <p class=" text-base sm:text-xl md:text-2xl">Asynchronous programming in JavaScript</p>
-                                <div class="certific_arrow"><i class=" text-4xl icon-angle-circled-right max-w-md"></i></div>
+                                <div class="certific_arrow"><i class=" text-4xl icon-right-circled"></i></div>
                             </a>
                         </div>
                         <div>
                             <a class=" flex justify-between items-center m-auto p-3 border text-2xl mt-3 max-w-md relative no-underline underline-animation hover:scale-110 transition ease-in-out" href="/open/prog-objekt.pdf" target="_blank">
                                 <p class=" text-base sm:text-xl md:text-2xl">Object-oriented programming in JavaScript</p>
-                                <div class="certific_arrow"><i class=" text-4xl icon-angle-circled-right"></i></div>
+                                <div class="certific_arrow"><i class=" text-4xl icon-right-circled"></i></div>
                             </a>
                         </div>
                         <div>
                             <a class=" flex justify-between items-center m-auto p-3 border text-2xl mt-3 max-w-md relative no-underline underline-animation hover:scale-110 transition ease-in-out" href="/open/prog-funk.pdf" target="_blank">
                                 <p class=" text-base sm:text-xl md:text-2xl">Functional programming in JavaScript</p>
-                                <div class="certific_arrow"><i class=" text-4xl icon-angle-circled-right"></i></div>
+                                <div class="certific_arrow"><i class=" text-4xl icon-right-circled"></i></div>
                             </a>
                         </div>
                         <div>
                             <a class=" flex justify-between items-center m-auto p-3 border text-2xl mt-3 max-w-md relative no-underline underline-animation hover:scale-110 transition ease-in-out" href="/open/es6-nowa-gen.pdf" target="_blank">
                                 <p class=" text-base sm:text-xl md:text-2xl">Gatsby.js - easy creation of high-performance sites</p>
-                                <div class="certific_arrow"><i class=" text-4xl icon-angle-circled-right"></i></div>
+                                <div class="certific_arrow"><i class=" text-4xl icon-right-circled"></i></div>
                             </a>
                         </div>
                         <div>
                             <a class=" flex justify-between items-center m-auto p-3 border text-2xl mt-3 max-w-md relative no-underline underline-animation hover:scale-110 transition ease-in-out" href="/open/es6-nowa-gen.pdf" target="_blank">
                                 <p class=" text-base sm:text-xl md:text-2xl">ES6 the new generation of JavaScript</p>
-                                <div class="certific_arrow"><i class=" text-4xl icon-angle-circled-right"></i></div>
+                                <div class="certific_arrow"><i class=" text-4xl icon-right-circled"></i></div>
                             </a>
                         </div>
                         <div>
                             <a class=" flex justify-between items-center m-auto p-3 border text-2xl mt-3 max-w-md relative no-underline underline-animation hover:scale-110 transition ease-in-out" href="/open/es6-nowa-gen.pdf" target="_blank">
                                 <p class=" text-base sm:text-xl md:text-2xl">JavaScript ecosystem</p>
-                                <div class="certific_arrow"><i class=" text-4xl icon-angle-circled-right"></i></div>
+                                <div class="certific_arrow"><i class=" text-4xl icon-right-circled"></i></div>
                             </a>
                         </div>
                         <div>
                             <a class=" flex justify-between items-center m-auto p-3 border text-2xl mt-3 max-w-md relative no-underline underline-animation hover:scale-110 transition ease-in-out" href="/open/es6-nowa-gen.pdf" target="_blank">
                                 <p class=" text-base sm:text-xl md:text-2xl">Webpack</p>
-                                <div class="certific_arrow"><i class=" text-4xl icon-angle-circled-right"></i></div>
+                                <div class="certific_arrow"><i class=" text-4xl icon-right-circled"></i></div>
                             </a>
                         </div>
                         <div class=" pb-2">
                             <a class=" flex justify-between items-center m-auto p-3 border text-2xl mt-3 max-w-md relative no-underline underline-animation hover:scale-110 transition ease-in-out" href="/open/es6-nowa-gen.pdf" target="_blank">
                                 <p class=" text-base sm:text-xl md:text-2xl">Node.js - dynamic applications</p>
-                                <div class="certific_arrow"><i class=" text-4xl icon-angle-circled-right"></i></div>
+                                <div class="certific_arrow"><i class=" text-4xl icon-right-circled"></i></div>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class=" w-20 m-auto p-5 flex justify-center">
-                    <div class=" lg:hidden text-5xl hover:transform hover:rotate-180" id="arrow"><i class="icon-sort"></i></div>
+                    <div class=" lg:hidden text-5xl" id="arrow"><i class="icon-sort"></i></div>
                 </div>
             </div>        
         </div>
@@ -351,7 +358,7 @@
     </section>
     
 
-    <section class=" h-screen text-white">
+    <section class=" h-screen text-white" id="sec4">
         
             <img class=" z-[-1] fixed object-cover h-screen w-screen top-0 opacity-0" id="foto-map" src="/src/img/map-01.png" alt="map">
         
@@ -425,7 +432,7 @@
         </div>
     </section>
 
-
+    
   </main>
 </body>
 </html>
