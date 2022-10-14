@@ -92,17 +92,17 @@ animitedElements.forEach((elements) => {
 
     const animitedImageTimeline = new ScrollTimeline({
         scrollOffsets: [
-            {target: elements, edge: "end", threshold: "1"},
+            {target: elements, edge: "end", threshold: "0"},
             {target: elements, edge: "start", threshold: "1"}
         ],
     }); 
 
     elements.animate(
         {
-            transform: [
-                "perspective(1000px) rotateX(45deg)",
-                "perspective(1000px) rotate(0)",
-            ],
+            // transform: [
+            //     "perspective(1000px) rotateX(45deg)",
+            //     "perspective(1000px) rotate(0)",
+            // ],
             opacity: ["0", "1"]
         },
         {
