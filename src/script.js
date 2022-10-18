@@ -21,8 +21,40 @@ import 'https://rawcdn.githack.com/flackr/scroll-timeline/637746fa559c3f9d01fcda
             $('#foto-map').addClass("opacity-1")
              
         }
+   });
 
-   })
+   $(window).scroll(function(){
+    if(($(window).scrollTop() > $('#sec-2').offset().top)){
+        $('#logo').addClass("fixed")
+        $('#logo').addClass("top-0")
+        $('#logo').addClass("left-0")
+        $('#logo').addClass("bg-black")
+        $('#logo').addClass("opacity-90")
+        $('#logo').addClass("w-screen")
+        $('#logo').addClass("pl-10")
+        $('#logo-a').removeClass("md:mt-10")
+        $('#logo-a').addClass("my-3")
+        $('#logo').addClass("z-50")
+        $('#logo-a').removeClass("sm:text-2xl")
+        $('#logo-a').removeClass("text-xl")
+        $('#logo-a').addClass("text-md")
+        
+    }else {
+        $('#logo').removeClass("fixed")
+        $('#logo').removeClass("top-0")
+        $('#logo').removeClass("left-0")
+        $('#logo').removeClass("bg-black")
+        $('#logo').removeClass("w-screen")
+        $('#logo').removeClass("pl-10")
+        $('#logo-a').addClass("md:mt-10")
+        $('#logo-a').removeClass("my-3")
+        $('#logo').removeClass("z-50")
+        $('#logo-a').addClass("sm:text-2xl")
+        $('#logo-a').addClass("text-xl")
+        $('#logo-a').removeClass("text-md")
+    }
+}),
+   
 
 
    $("div#burger").click(function()
