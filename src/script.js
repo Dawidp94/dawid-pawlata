@@ -1,22 +1,29 @@
 import 'https://rawcdn.githack.com/flackr/scroll-timeline/637746fa559c3f9d01fcdaf2fcb7e649d18dfc33/dist/scroll-timeline.js';
 
    $(window).scroll(function(){
-        if($(window).scrollTop() > 1000){
-    $('#foto-main').addClass("opacity-0")
-        } else {$('#foto-main').removeClass("opacity-0")
-
+        if(($(window).scrollTop() <= 1000)){
+            $('#foto-map').addClass("opacity-0")
+            $('#foto-between').addClass("opacity-0")
+            $('#foto-main').addClass("opacity-1")
+            $('#foto-main').removeClass("opacity-0")
+    }
+        else if($(window).scrollTop() > 1000 && $(window).scrollTop() < 2500){
+            $('#foto-main').addClass("opacity-0")
+            $('#foto-between').addClass("opacity-1")
+            $('#foto-between').removeClass("opacity-0")
+            $('#foto-map').removeClass("opacity-1")
+            $('#foto-map').addClass("opacity-0")
+            // $('#foto-map').removeClass("opacity-0")
+        } else {
+            $('#foto-between').addClass("opacity-0")
+            $('#foto-between').removeClass("opacity-1")
+            $('#foto-map').removeClass("opacity-0")
+            $('#foto-map').addClass("opacity-1")
+             
         }
+
    })
 
-   $(window).scroll(function(){
-    if($(window).scrollTop() > 1000){
-    $('#foto-map').addClass("opacity-1")
-    $('#foto-map').removeClass("opacity-0")
-    } else {$('#foto-map').removeClass("opacity-1")
-    $('#foto-map').addClass("opacity-0")
-
-    }
-    }),
 
    $("div#burger").click(function()
    {
@@ -51,44 +58,9 @@ import 'https://rawcdn.githack.com/flackr/scroll-timeline/637746fa559c3f9d01fcda
    
       
 
-
-
-
-
- 
-
-///////////////////////////////////
-
-// const scrollTracker = document.querySelector('.about_all_article')
-
-// const scrollTrackingTimeline = new ScrollTimeline({
-//     sourse: document.scrollingElement,
-//     orientation: block,
-//     scrollOffsets: [CSS.percent(0), CSS.percent(100)]
-// })
-
-// scrollTracker.animate(
-//     {
-//         transform: ['scaleX(0)', 'scaleX(1)']
-//     },
-//     {
-//         duration: 1,
-//         timeline: scrollTrackingTimeline
-//     }
-// )
-
-
-
-
-///////
-
-
 const animitedElements = document.querySelectorAll(".animited");
 
 animitedElements.forEach((elements) => {
-
-    // const elementsOffsetTop = elements.offsetTop;
-    // const elementsHeight = elements.offsetHeight;
 
     const animitedImageTimeline = new ScrollTimeline({
         scrollOffsets: [
@@ -99,10 +71,6 @@ animitedElements.forEach((elements) => {
 
     elements.animate(
         {
-            // transform: [
-            //     "perspective(1000px) rotateX(45deg)",
-            //     "perspective(1000px) rotate(0)",
-            // ],
             opacity: ["0", "1"]
         },
         {
@@ -110,7 +78,6 @@ animitedElements.forEach((elements) => {
             easing: "linear",
             timeline: animitedImageTimeline,
             
-    
         }
     );
 });
